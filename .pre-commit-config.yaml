@@ -8,4 +8,10 @@ repos:
 -   repo: https://github.com/PyCQA/flake8
     rev: 7.3.0
     hooks:
-    -   id: flake8
+    - id: flake8
+-   repo: https://github.com/djlint/djlint
+    rev: v1.36.4
+    hooks:
+      - id: djlint
+        args: ["--lint", "--reformat"]
+        files: "\\.html$"
