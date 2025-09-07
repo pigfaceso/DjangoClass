@@ -1,4 +1,4 @@
-# Django WebSite on Class
+# Django WebSite on Class -_-
 
 ## How to setup this project
 
