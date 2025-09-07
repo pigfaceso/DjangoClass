@@ -1,0 +1,166 @@
+check yaml...............................................................[42mPassed[m
+fix end of files.........................................................[42mPassed[m
+trim trailing whitespace.................................................[42mPassed[m
+ruff check...............................................................[41mFailed[m
+[2m- hook id: ruff-check[m
+[2m- exit code: 1[m
+
+[1m[91mF403 [0m[1m`from .models import *` used; unable to detect undefined names[0m
+ [1m[94m-->[0m myapp/admin.py:2:1
+  [1m[94m|[0m
+[1m[94m1 |[0m from django.contrib import admin
+[1m[94m2 |[0m from .models import *
+  [1m[94m|[0m [1m[91m^^^^^^^^^^^^^^^^^^^^^[0m
+[1m[94m3 |[0m
+[1m[94m4 |[0m # Register your models here.
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`Product` may be undefined, or defined from star imports[0m
+ [1m[94m-->[0m myapp/admin.py:6:21
+  [1m[94m|[0m
+[1m[94m4 |[0m # Register your models here.
+[1m[94m5 |[0m
+[1m[94m6 |[0m admin.site.register(Product)
+  [1m[94m|[0m                     [1m[91m^^^^^^^[0m
+[1m[94m7 |[0m admin.site.register(contactList)
+[1m[94m8 |[0m admin.site.register(Profile)
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`contactList` may be undefined, or defined from star imports[0m
+ [1m[94m-->[0m myapp/admin.py:7:21
+  [1m[94m|[0m
+[1m[94m6 |[0m admin.site.register(Product)
+[1m[94m7 |[0m admin.site.register(contactList)
+  [1m[94m|[0m                     [1m[91m^^^^^^^^^^^[0m
+[1m[94m8 |[0m admin.site.register(Profile)
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`Profile` may be undefined, or defined from star imports[0m
+ [1m[94m-->[0m myapp/admin.py:8:21
+  [1m[94m|[0m
+[1m[94m6 |[0m admin.site.register(Product)
+[1m[94m7 |[0m admin.site.register(contactList)
+[1m[94m8 |[0m admin.site.register(Profile)
+  [1m[94m|[0m                     [1m[91m^^^^^^^[0m
+  [1m[94m|[0m
+
+[1m[91mF403 [0m[1m`from .views import *` used; unable to detect undefined names[0m
+ [1m[94m-->[0m myapp/urls.py:3:1
+  [1m[94m|[0m
+[1m[94m1 |[0m from django.urls import path
+[1m[94m2 |[0m
+[1m[94m3 |[0m from .views import *
+  [1m[94m|[0m [1m[91m^^^^^^^^^^^^^^^^^^^^[0m
+[1m[94m4 |[0m
+[1m[94m5 |[0m urlpatterns = [
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`home` may be undefined, or defined from star imports[0m
+ [1m[94m-->[0m myapp/urls.py:6:14
+  [1m[94m|[0m
+[1m[94m5 |[0m urlpatterns = [
+[1m[94m6 |[0m     path("", home, name="home-page"),
+  [1m[94m|[0m              [1m[91m^^^^[0m
+[1m[94m7 |[0m     path("about/", aboutUs, name="about-page"),
+[1m[94m8 |[0m     path("contact/", contact, name="contact-page"),
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`aboutUs` may be undefined, or defined from star imports[0m
+ [1m[94m-->[0m myapp/urls.py:7:20
+  [1m[94m|[0m
+[1m[94m5 |[0m urlpatterns = [
+[1m[94m6 |[0m     path("", home, name="home-page"),
+[1m[94m7 |[0m     path("about/", aboutUs, name="about-page"),
+  [1m[94m|[0m                    [1m[91m^^^^^^^[0m
+[1m[94m8 |[0m     path("contact/", contact, name="contact-page"),
+[1m[94m9 |[0m     path("showcontact/", showContact, name="showcontact-page"),
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`contact` may be undefined, or defined from star imports[0m
+  [1m[94m-->[0m myapp/urls.py:8:22
+   [1m[94m|[0m
+[1m[94m 6 |[0m     path("", home, name="home-page"),
+[1m[94m 7 |[0m     path("about/", aboutUs, name="about-page"),
+[1m[94m 8 |[0m     path("contact/", contact, name="contact-page"),
+   [1m[94m|[0m                      [1m[91m^^^^^^^[0m
+[1m[94m 9 |[0m     path("showcontact/", showContact, name="showcontact-page"),
+[1m[94m10 |[0m     path("home2", home2, name="home2"),
+   [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`showContact` may be undefined, or defined from star imports[0m
+  [1m[94m-->[0m myapp/urls.py:9:26
+   [1m[94m|[0m
+[1m[94m 7 |[0m     path("about/", aboutUs, name="about-page"),
+[1m[94m 8 |[0m     path("contact/", contact, name="contact-page"),
+[1m[94m 9 |[0m     path("showcontact/", showContact, name="showcontact-page"),
+   [1m[94m|[0m                          [1m[91m^^^^^^^^^^^[0m
+[1m[94m10 |[0m     path("home2", home2, name="home2"),
+[1m[94m11 |[0m ]
+   [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`home2` may be undefined, or defined from star imports[0m
+  [1m[94m-->[0m myapp/urls.py:10:19
+   [1m[94m|[0m
+[1m[94m 8 |[0m     path("contact/", contact, name="contact-page"),
+[1m[94m 9 |[0m     path("showcontact/", showContact, name="showcontact-page"),
+[1m[94m10 |[0m     path("home2", home2, name="home2"),
+   [1m[94m|[0m                   [1m[91m^^^^^[0m
+[1m[94m11 |[0m ]
+   [1m[94m|[0m
+
+[1m[91mF403 [0m[1m`from .models import *` used; unable to detect undefined names[0m
+ [1m[94m-->[0m myapp/views.py:3:1
+  [1m[94m|[0m
+[1m[94m1 |[0m from django.shortcuts import render
+[1m[94m2 |[0m from django.http import HttpResponse
+[1m[94m3 |[0m from .models import *
+  [1m[94m|[0m [1m[91m^^^^^^^^^^^^^^^^^^^^^[0m
+[1m[94m4 |[0m from django.contrib.auth import authenticate, login
+  [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`Product` may be undefined, or defined from star imports[0m
+  [1m[94m-->[0m myapp/views.py:10:18
+   [1m[94m|[0m
+[1m[94m 9 |[0m def home(request):
+[1m[94m10 |[0m     allproduct = Product.objects.all()
+   [1m[94m|[0m                  [1m[91m^^^^^^^[0m
+[1m[94m11 |[0m     context = {"pd": allproduct}
+[1m[94m12 |[0m     return render(request, "myapp/home.html", context)
+   [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`contactList` may be undefined, or defined from star imports[0m
+  [1m[94m-->[0m myapp/views.py:36:21
+   [1m[94m|[0m
+[1m[94m34 |[0m             return render(request, "myapp/contact.html", context)
+[1m[94m35 |[0m
+[1m[94m36 |[0m         newRecord = contactList()
+   [1m[94m|[0m                     [1m[91m^^^^^^^^^^^[0m
+[1m[94m37 |[0m         newRecord.topic = topic
+[1m[94m38 |[0m         newRecord.email = email
+   [1m[94m|[0m
+
+[1m[91mE722 [0m[1mDo not use bare `except`[0m
+  [1m[94m-->[0m myapp/views.py:61:9
+   [1m[94m|[0m
+[1m[94m59 |[0m             user = authenticate(username=username, password=password)
+[1m[94m60 |[0m             login(request, user)
+[1m[94m61 |[0m         except:
+   [1m[94m|[0m         [1m[91m^^^^^^[0m
+[1m[94m62 |[0m             context["message"] = "username or password is incorrect"
+   [1m[94m|[0m
+
+[1m[91mF405 [0m[1m`contactList` may be undefined, or defined from star imports[0m
+  [1m[94m-->[0m myapp/views.py:68:18
+   [1m[94m|[0m
+[1m[94m67 |[0m def showContact(request):
+[1m[94m68 |[0m     allcontact = contactList.objects.all()
+   [1m[94m|[0m                  [1m[91m^^^^^^^^^^^[0m
+[1m[94m69 |[0m     context = {"contact": allcontact}
+[1m[94m70 |[0m     return render(request, "myapp/showcontact.html", context)
+   [1m[94m|[0m
+
+Found 15 errors.
+
+ruff format..............................................................[42mPassed[m
+Detect hardcoded secrets.................................................[42mPassed[m
+djLint linting...........................................................[42mPassed[m

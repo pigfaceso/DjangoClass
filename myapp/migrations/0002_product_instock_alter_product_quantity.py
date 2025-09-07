@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('myapp', '0001_initial'),
+        ("myapp", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='product',
-            name='instock',
+            model_name="product",
+            name="instock",
             field=models.BooleanField(default=True),
         ),
         migrations.AlterField(
-            model_name='product',
-            name='quantity',
+            model_name="product",
+            name="quantity",
             field=models.IntegerField(blank=True, default=0, null=True),
         ),
     ]
