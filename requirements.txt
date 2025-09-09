@@ -1,3 +1,2 @@
 Django==5.2.6
-djlint==1.36.4
 pre-commit==3.7.1
